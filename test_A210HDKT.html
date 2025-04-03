@@ -14,6 +14,10 @@
             padding: 20px;
             line-height: 1.4;
         }
+        @page {
+            size: A4;
+            margin: 2cm 2.5cm 2cm 2cm;
+        }
         .export-button {
             position: fixed;
             top: 20px;
@@ -483,7 +487,28 @@
 
         function exportToWord() {
             const content = document.getElementById('Conten').innerHTML;
-            const blob = new Blob([content], { type: 'application/msword' });
+            const htmlContent = `
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <meta charset="utf-8">
+                    <style>
+                        @page {
+                            size: A4;
+                            margin: 2cm 2.5cm 2cm 2cm;
+                        }
+                        body {
+                            font-family: 'Times New Roman', serif;
+                            line-height: 1.4;
+                        }
+                    </style>
+                </head>
+                <body>
+                    ${content}
+                </body>
+                </html>
+            `;
+            const blob = new Blob([htmlContent], { type: 'application/msword' });
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
