@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Thông tin Hợp đồng Kiểm toán</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+    h1 {
+      color: #007bff;
+    }
+    .hopdong {
+      background: #fff;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    .label {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .value {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1>HỢP ĐỒNG KIỂM TOÁN</h1>
+  <div class="hopdong">
+    <div>
+      <div class="label">Số hợp đồng:</div>
+      <div class="value" id="sohopdong"></div>
+    </div>
+    <div>
+      <div class="label">Ngày hợp đồng:</div>
+      <div class="value" id="ngayhopdong"></div>
+    </div>
+    <div>
+      <div class="label">Nội dung hợp đồng:</div>
+      <div class="value" id="noidung"></div>
+    </div>
+  </div>
+
+  <script>
+    // Lấy tham số từ URL
+    function getParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    const id = getParam("ID_HopDong");
+
+    if (id) {
+      const apiURL = "https://script.google.com/macros/s/AKfycbx45gO6aX8EJ-3YLRlGwUA2_CGERAdVswZcJyGm892e4w7YsG5RfKY9JP196rRByqbVPA/exec?ID_HopDong=" + encodeURIComponent(id);
+
+      fetch(apiURL)
+        .then(res => res.json())
+        .then(data => {
+          if (data.error) {
+            alert("Lỗi: " + data.error);
+            return;
+          }
+          document.getElementById("sohopdong").textContent = data.SoHopDong || "(Chưa có)";
+          document.getElementById("ngayhopdong").textContent = data.NgayHopDong || "(Chưa có)";
+          document.getElementById("noidung").textContent = data.NoiDungHopDong || "(Chưa có)";
+        })
+        .catch(err => {
+          alert("Lỗi khi kết nối đến API.");
+          console.error(err);
+        });
+    } else {
+      alert("Thiếu tham số ID_HopDong trong URL.");
+    }
+  </script>
+</body>
+</html>
