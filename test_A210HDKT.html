@@ -13,6 +13,7 @@
             margin: 0 auto;
             padding: 20px;
             line-height: 1.4;
+            font-size: 13px;
         }
         @page {
             size: A4;
@@ -72,6 +73,9 @@
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
+        }
+        .page-break {
+            page-break-before: always;
         }
     </style>
 </head>
@@ -204,7 +208,7 @@
             điều
             khoản như sau:</p>
 <div style="margin-top: 20px; line-height: 1.6; text-align: justify;">
-<h3 style="margin: 20px 0 10px 0; font-weight: bold;">ĐIỀU 1: NỘI DUNG HỢP ĐỒNG</h3>
+<h3 style="margin: 20px 0 10px 0; font-weight: bold;" class="page-break">ĐIỀU 1: NỘI DUNG HỢP ĐỒNG</h3>
 <p style="margin: 10px 20px 0;">Bên B đồng ý cung cấp cho bên A dịch vụ ,
                 bao gồm Bảng cân đối kế
                 toán tại ngày <span data-field="NamKiT">111</span>, Báo cáo kết quả hoạt động kinh doanh, Báo cáo lưu
@@ -487,6 +491,8 @@
 
         function exportToWord() {
             const content = document.getElementById('Conten').innerHTML;
+            const soHopDong = document.querySelector('[data-field="SoHopDong"]').textContent;
+            const fileName = `hop-dong-kinh-te-${soHopDong}.doc`;
             const htmlContent = `
                 <!DOCTYPE html>
                 <html>
@@ -500,6 +506,10 @@
                         body {
                             font-family: 'Times New Roman', serif;
                             line-height: 1.4;
+                            font-size: 13px;
+                        }
+                        .page-break {
+                            page-break-before: always;
                         }
                     </style>
                 </head>
@@ -512,7 +522,7 @@
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = 'HopDongKiemToan.doc';
+            a.download = fileName;
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
