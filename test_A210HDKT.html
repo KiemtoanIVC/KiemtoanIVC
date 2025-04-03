@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <title>Hợp đồng kiểm toán</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
-    <style>
+<meta charset="utf-8"/>
+<title>Hợp đồng kiểm toán</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet"/>
+<style>
         body {
             font-family: 'Times New Roman', serif;
             max-width: 800px;
@@ -71,149 +72,136 @@
     </style>
 </head>
 <body>
-    <div class="loading-overlay">
-        <div class="spinner"></div>
-    </div>
-    <button onclick="printDocument()" class="print-button">In nhanh</button>
-    <button onclick="exportToWord()" class="export-button">Xuất ra Word</button>
-
-    <div id="Conten" style="display: none;">
-        <table style="width: 100%; border-collapse: collapse;">
-            <tbody><tr>
-                <td colspan="2">
-                    <h3 style="text-align: center; margin: 0;">CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM</h3>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <h3 style="text-align: center; margin: 0;">Độc lập - Tự do - Hạnh phúc</h3>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <p style="text-align: center; margin: 0;">------o0o------</p>
-                </td>
-            </tr>
-            <tr>
-                <td style="width: 50%">
-                    <p style="margin: 0;">Số: <span data-field="SoHopDong">030425.03/HDKT-IVC</span></p>
-                </td>
-            </tr>
-            <tr>
-                <td style="width: 50%"></td>
-                <td style="width: 50%; text-align: right;">
-                    <p style="margin: 0;"><i>Hà Nội, <span data-field="NgayHopDong">ngày 03 tháng 04 năm 2025</span></i></p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <h2 style="text-align: center; margin: 10px 0 0 0;">HỢP ĐỒNG KIỂM TOÁN</h2>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <p style="text-align: center; margin: 0;"><i>(V/v: <span data-field="NoiDungHopDong">aaa</span>)</i>
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <p style="text-align: center; margin: 0;">của <span data-field="TenKH">CÔNG TY TNHH CHENG TONG VIỆT NAM</span></p>
-                </td>
-            </tr>
-        </tbody></table>
-
-        
-        <br>
-        <i style="margin: 5px 0;">● Căn cứ Bộ luật dân sự số 91/2015/QH13 ngày 24/11/2015;</i> <br>
-        <i style="margin: 5px 0;">● Căn cứ Luật thương mại số 36/2005/QH11 ngày 14/6/2005;</i><br>
-        <i style="margin: 5px 0;">● Căn cứ Luật kiểm toán độc lập số 67/2011/QH12 ngày 29/3/2011;</i><br>
-        <i style="margin: 5px 0;">● Căn cứ Nghị định 17/2012/NĐ - CP ngày 13/3/2012 của Chính phủ quy định chi tiết và
+<div class="loading-overlay">
+<div class="spinner"></div>
+</div>
+<button class="print-button" onclick="printDocument()">In nhanh</button>
+<button class="export-button" onclick="exportToWord()">Xuất ra Word</button>
+<div id="Conten" style="">
+<table style="width: 100%; border-collapse: collapse;">
+<tbody><tr>
+<td colspan="2">
+<h3 style="text-align: center; margin: 0;">CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM</h3>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<h3 style="text-align: center; margin: 0;">Độc lập - Tự do - Hạnh phúc</h3>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<p style="text-align: center; margin: 0;">------o0o------</p>
+</td>
+</tr>
+<tr>
+<td style="width: 50%">
+<p style="margin: 0;">Số: <span data-field="SoHopDong">030425.03/HDKT-IVC</span></p>
+</td>
+</tr>
+<tr>
+<td style="width: 50%"></td>
+<td style="width: 50%; text-align: right;">
+<p style="margin: 0;"><i>Hà Nội, <span data-field="NgayHopDong">ngày 03 tháng 04 năm 2025</span></i></p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<h2 style="text-align: center; margin: 10px 0 0 0;">HỢP ĐỒNG KIỂM TOÁN</h2>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<p style="text-align: center; margin: 0;"><i>(V/v: <span data-field="NoiDungHopDong">aaa</span>)</i>
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<p style="text-align: center; margin: 0;">của <span data-field="TenKH">CÔNG TY TNHH CHENG TONG VIỆT NAM</span></p>
+</td>
+</tr>
+</tbody></table>
+<br/>
+<i style="margin: 5px 0;">● Căn cứ Bộ luật dân sự số 91/2015/QH13 ngày 24/11/2015;</i> <br/>
+<i style="margin: 5px 0;">● Căn cứ Luật thương mại số 36/2005/QH11 ngày 14/6/2005;</i><br/>
+<i style="margin: 5px 0;">● Căn cứ Luật kiểm toán độc lập số 67/2011/QH12 ngày 29/3/2011;</i><br/>
+<i style="margin: 5px 0;">● Căn cứ Nghị định 17/2012/NĐ - CP ngày 13/3/2012 của Chính phủ quy định chi tiết và
             hướng dẫn thi hành một số
-            điều của Luật kiểm toán độc lập;</i><br>
-        <i style="margin: 5px 0;">● Căn cứ Chuẩn mực kiểm toán Việt Nam số 210 về Hợp đồng kiểm toán;</i><br>
-        <i style="margin: 5px 0;">● Căn cứ vào yêu cầu của <span data-field="TenKH">CÔNG TY TNHH CHENG TONG VIỆT NAM</span>;</i><br>
-
-
-        <p style="margin-top: 20px;">Hôm nay, <span data-field="NgayHopDong">ngày 03 tháng 04 năm 2025</span>, chúng tôi gồm có:</p>
-
-        
-        <div style="margin-top: 20px;">
-            <p style="margin: 0; font-weight: bold;">BÊN A : <span data-field="TenKH">CÔNG TY TNHH CHENG TONG VIỆT NAM</span></p>
-            <table style="margin-left: 40px; border-collapse: collapse;">
-                <tbody><tr>
-                    <td style="width: 120px; padding: 5px 0; font-weight: bold;">Người đại diện</td>
-                    <td style="padding: 5px 0; font-weight: bold;"> : <span data-field="NguoiDaiDienKH"></span></td>
-                </tr>
-                <tr>
-                    <td style="width: 120px; padding: 5px 0;">Chức vụ</td>
-                    <td style="padding: 5px 0;"> : <span data-field="ChucVuKH"></span></td>
-                </tr>
-                <tr>
-                    <td style="width: 120px; padding: 5px 0;">Địa chỉ</td>
-                    <td style="padding: 5px 0;"> : <span data-field="DiaChiKH"></span></td>
-                </tr>
-                <tr>
-                    <td style="width: 120px; padding: 5px 0;">Mã số thuế</td>
-                    <td style="padding: 5px 0;"> : <span data-field="MST_KH"></span></td>
-                </tr>
-                <tr>
-                    <td style="width: 120px; padding: 5px 0;">Tài khoản số</td>
-                    <td style="padding: 5px 0;"> : <span data-field="SoTK_NganHang"></span></td>
-                </tr>
-                <tr>
-                    <td style="width: 120px; padding: 5px 0;">Tại Ngân hàng</td>
-                    <td style="padding: 5px 0;"> : <span data-field="TaiNganHang"></span></td>
-                </tr>
-            </tbody></table>
-        </div>
-
-        
-        <div style="margin-top: 25px;">
-            <p style="margin: 0; font-weight: bold; ">BÊN B: CÔNG TY TNHH KIỂM TOÁN IVC</p>
-            <table style="margin-left: 40px; border-collapse: collapse;">
-                <tbody><tr>
-                    <td style="width: 120px; padding: 5px 0; font-weight: bold;">Người đại diện</td>
-                    <td style="padding: 5px 0; font-weight: bold;"> : Ông Phạm Duy Hiệp</td>
-                </tr>
-                <tr>
-                    <td style="width: 120px; padding: 5px 0;">Chức vụ</td>
-                    <td style="padding: 5px 0;"> : Phó Tổng Giám đốc</td>
-                </tr>
-                <tr>
-                    <td style="width: 120px; padding: 5px 0;">Địa chỉ</td>
-                    <td style="padding: 5px 0;"> : Tầng 2, số 1 ngõ 2 Láng Hạ, phường Thành Công, quận Ba Đình, thành
+            điều của Luật kiểm toán độc lập;</i><br/>
+<i style="margin: 5px 0;">● Căn cứ Chuẩn mực kiểm toán Việt Nam số 210 về Hợp đồng kiểm toán;</i><br/>
+<i style="margin: 5px 0;">● Căn cứ vào yêu cầu của ;</i><br/>
+<p style="margin-top: 20px;">Hôm nay, , chúng tôi gồm có:</p>
+<div style="margin-top: 20px;">
+<p style="margin: 0; font-weight: bold;">BÊN A : </p>
+<table style="margin-left: 40px; border-collapse: collapse;">
+<tbody><tr>
+<td style="width: 120px; padding: 5px 0; font-weight: bold;">Người đại diện</td>
+<td style="padding: 5px 0; font-weight: bold;"> : <span data-field="NguoiDaiDienKH"></span></td>
+</tr>
+<tr>
+<td style="width: 120px; padding: 5px 0;">Chức vụ</td>
+<td style="padding: 5px 0;"> : <span data-field="ChucVuKH"></span></td>
+</tr>
+<tr>
+<td style="width: 120px; padding: 5px 0;">Địa chỉ</td>
+<td style="padding: 5px 0;"> : <span data-field="DiaChiKH"></span></td>
+</tr>
+<tr>
+<td style="width: 120px; padding: 5px 0;">Mã số thuế</td>
+<td style="padding: 5px 0;"> : <span data-field="MST_KH"></span></td>
+</tr>
+<tr>
+<td style="width: 120px; padding: 5px 0;">Tài khoản số</td>
+<td style="padding: 5px 0;"> : <span data-field="SoTK_NganHang"></span></td>
+</tr>
+<tr>
+<td style="width: 120px; padding: 5px 0;">Tại Ngân hàng</td>
+<td style="padding: 5px 0;"> : <span data-field="TaiNganHang"></span></td>
+</tr>
+</tbody></table>
+</div>
+<div style="margin-top: 25px;">
+<p style="margin: 0; font-weight: bold; ">BÊN B: CÔNG TY TNHH KIỂM TOÁN IVC</p>
+<table style="margin-left: 40px; border-collapse: collapse;">
+<tbody><tr>
+<td style="width: 120px; padding: 5px 0; font-weight: bold;">Người đại diện</td>
+<td style="padding: 5px 0; font-weight: bold;"> : Ông Phạm Duy Hiệp</td>
+</tr>
+<tr>
+<td style="width: 120px; padding: 5px 0;">Chức vụ</td>
+<td style="padding: 5px 0;"> : Phó Tổng Giám đốc</td>
+</tr>
+<tr>
+<td style="width: 120px; padding: 5px 0;">Địa chỉ</td>
+<td style="padding: 5px 0;"> : Tầng 2, số 1 ngõ 2 Láng Hạ, phường Thành Công, quận Ba Đình, thành
                         phố Hà
                         Nội</td>
-                </tr>
-                <tr>
-                    <td style="width: 120px; padding: 5px 0;">Điện thoại</td>
-                    <td style="padding: 5px 0;"> : 0943 863 073</td>
-                </tr>
-                <tr>
-                    <td style="width: 120px; padding: 5px 0;">Mã số thuế</td>
-                    <td style="padding: 5px 0;"> : 0109564702</td>
-                </tr>
-                <tr>
-                    <td style="width: 120px; padding: 5px 0;">Tài khoản số</td>
-                    <td style="padding: 5px 0;"> : 0909597168888</td>
-                </tr>
-                <tr>
-                    <td style="width: 120px; padding: 5px 0;">Tại Ngân hàng</td>
-                    <td style="padding: 5px 0;"> : Ngân hàng TMCP Quân Đội - CN Hoài Đức</td>
-                </tr>
-            </tbody></table>
-        </div>
-
-
-        <p style="margin: 10px 20px 0;">Sau khi bàn bạc và thương lượng, hai bên cùng thỏa thuận ký kết hợp đồng gồm các
+</tr>
+<tr>
+<td style="width: 120px; padding: 5px 0;">Điện thoại</td>
+<td style="padding: 5px 0;"> : 0943 863 073</td>
+</tr>
+<tr>
+<td style="width: 120px; padding: 5px 0;">Mã số thuế</td>
+<td style="padding: 5px 0;"> : 0109564702</td>
+</tr>
+<tr>
+<td style="width: 120px; padding: 5px 0;">Tài khoản số</td>
+<td style="padding: 5px 0;"> : 0909597168888</td>
+</tr>
+<tr>
+<td style="width: 120px; padding: 5px 0;">Tại Ngân hàng</td>
+<td style="padding: 5px 0;"> : Ngân hàng TMCP Quân Đội - CN Hoài Đức</td>
+</tr>
+</tbody></table>
+</div>
+<p style="margin: 10px 20px 0;">Sau khi bàn bạc và thương lượng, hai bên cùng thỏa thuận ký kết hợp đồng gồm các
             điều
             khoản như sau:</p>
-
-        
-        <div style="margin-top: 20px; line-height: 1.6; text-align: justify;">
-            <h3 style="margin: 20px 0 10px 0; font-weight: bold;">ĐIỀU 1: NỘI DUNG HỢP ĐỒNG</h3>
-            <p style="margin: 10px 20px 0;">Bên B đồng ý cung cấp cho bên A dịch vụ <span data-field="NoiDungHopDong">aaa</span>,
+<div style="margin-top: 20px; line-height: 1.6; text-align: justify;">
+<h3 style="margin: 20px 0 10px 0; font-weight: bold;">ĐIỀU 1: NỘI DUNG HỢP ĐỒNG</h3>
+<p style="margin: 10px 20px 0;">Bên B đồng ý cung cấp cho bên A dịch vụ ,
                 bao gồm Bảng cân đối kế
                 toán tại ngày <span data-field="NamKiT">111</span>, Báo cáo kết quả hoạt động kinh doanh, Báo cáo lưu
                 chuyển
@@ -224,75 +212,65 @@
                 theo báo cáo kiểm toán chỉ được bên A sử dụng cho mục đích quản trị và nộp cho các cơ quan chức năng
                 theo
                 quy định.</p>
-
-            <p style="margin: 10px 20px 0;">Báo cáo tài chính được lập phù hợp các Chuẩn mực kế toán Việt Nam, Chế độ kế
+<p style="margin: 10px 20px 0;">Báo cáo tài chính được lập phù hợp các Chuẩn mực kế toán Việt Nam, Chế độ kế
                 toán
                 doanh nghiệp Việt Nam và
                 các quy định pháp lý có liên quan đến việc lập và trình bày báo cáo tài chính.</p>
-
-            <p style="margin: 10px 20px 0;">Việc kiểm toán báo cáo tài chính cho năm tài chính kết thúc ngày <span data-field="NamKiT">111</span>, Bên B
+<p style="margin: 10px 20px 0;">Việc kiểm toán báo cáo tài chính cho năm tài chính kết thúc ngày , Bên B
                 sẽ kiểm toán báo cáo tài chính của Bên A theo các Chuẩn mực kiểm toán Việt Nam.</p>
-
-            <h3 style="margin: 20px 0 10px 0; font-weight: bold;">ĐIỀU 2: TRÁCH NHIỆM CỦA CÁC BÊN</h3>
-            <p style="margin: 10px 0;"><i>Trách nhiệm của bên A:</i></p>
-
-            <p style="margin: 10px 20px 0;">Cuộc kiểm toán của bên B sẽ được thực hiện trên cơ sở Ban Giám đốc và những
+<h3 style="margin: 20px 0 10px 0; font-weight: bold;">ĐIỀU 2: TRÁCH NHIỆM CỦA CÁC BÊN</h3>
+<p style="margin: 10px 0;"><i>Trách nhiệm của bên A:</i></p>
+<p style="margin: 10px 20px 0;">Cuộc kiểm toán của bên B sẽ được thực hiện trên cơ sở Ban Giám đốc và những
                 người
                 chịu trách nhiệm về quản
                 trị doanh nghiệp (trong phạm vi phù hợp) của Bên A hiểu và thừa nhận có trách nhiệm:</p>
-
-            <ol type="a" style="margin-left: 20px; padding-left: 20px;">
-                <li style="margin: 10px 20px 0;">Đối với việc lập và trình bày báo cáo tài chính trung thực và hợp lý,
+<ol style="margin-left: 20px; padding-left: 20px;" type="a">
+<li style="margin: 10px 20px 0;">Đối với việc lập và trình bày báo cáo tài chính trung thực và hợp lý,
                     phù
                     hợp
                     với các chuẩn mực kế toán
                     Việt Nam, chế độ kế toán (doanh nghiệp) Việt Nam và các quy định pháp lý có liên quan đến lập và
                     trình
                     bày báo cáo tài chính được áp dụng;</li>
-
-                <li style="margin: 10px 20px 0;">Xây dựng và duy trì kiểm soát nội bộ mà Ban Giám đốc và Ban quản trị
+<li style="margin: 10px 20px 0;">Xây dựng và duy trì kiểm soát nội bộ mà Ban Giám đốc và Ban quản trị
                     (trong phạm vi phù hợp) xác định là cần thiết để đảm bảo cho việc lập và trình bày báo cáo tài chính
                     không còn sai sót trọng yếu do gian lận hoặc do nhầm lẫn;</li>
-
-                <li style="margin: 10px 20px 0;">Đảm bảo các sổ kế toán và chứng từ kế toán thích hợp được lưu giữ để
+<li style="margin: 10px 20px 0;">Đảm bảo các sổ kế toán và chứng từ kế toán thích hợp được lưu giữ để
                     phản
                     ánh
                     tình hình tài chính của
                     Công ty, với mức độ chính xác hợp lý, tại bất kỳ thời điểm nào và đảm bảo rằng các sổ kế toán tuân
                     thủ
                     với chế độ kế toán đã được áp dụng;</li>
-
-                <li style="margin: 10px 20px 0;">Đảm bảo cung cấp kịp thời cho bên B:
-                    <ol type="i" style="list-style-type: lower-roman; margin-left: 20px; padding-left: 20px;">
-                        <li style="margin: 5px 0;">Quyền tiếp cận với tất cả tài liệu, thông tin mà Ban Giám đốc nhận
+<li style="margin: 10px 20px 0;">Đảm bảo cung cấp kịp thời cho bên B:
+                    <ol style="list-style-type: lower-roman; margin-left: 20px; padding-left: 20px;" type="i">
+<li style="margin: 5px 0;">Quyền tiếp cận với tất cả tài liệu, thông tin mà Ban Giám đốc nhận
                             thấy
                             là có liên quan đến quá
                             trình lập và trình bày báo cáo tài chính như chứng từ kế toán, sổ kế toán, tài liệu và các
                             vấn
                             đề khác;</li>
-                        <li style="margin: 5px 0;">Các thông tin bổ sung mà kiểm toán viên và doanh nghiệp kiểm toán yêu
+<li style="margin: 5px 0;">Các thông tin bổ sung mà kiểm toán viên và doanh nghiệp kiểm toán yêu
                             cầu
                             Ban Giám đốc cung cấp
                             hoặc giải trình để phục vụ cho mục đích của cuộc kiểm toán;</li>
-                        <li style="margin: 5px 0;">Quyền tiếp cận không hạn chế đối với nhân sự của bên A mà kiểm toán
+<li style="margin: 5px 0;">Quyền tiếp cận không hạn chế đối với nhân sự của bên A mà kiểm toán
                             viên
                             và doanh nghiệp kiểm
                             toán xác định là cần thiết để thu thập bằng chứng kiểm toán. Bố trí nhân sự liên quan cùng
                             làm
                             việc với bên B trong quá trình kiểm toán.</li>
-                    </ol>
-                </li>
-            </ol>
-
-            <p style="margin: 10px 20px 0;">Việc Ban Giám đốc không thể cung cấp cho Bên B các thông tin được đề cập như
+</ol>
+</li>
+</ol>
+<p style="margin: 10px 20px 0;">Việc Ban Giám đốc không thể cung cấp cho Bên B các thông tin được đề cập như
                 trên
                 hoặc quyền trao đổi với
                 nhân viên trong Công ty của Bên A có thể gây chậm hoàn thành công việc và phát hành báo cáo của Bên B,
                 và/hoặc thay đổi phạm vi các thủ tục kiểm toán, hoặc thậm chí dẫn tới việc Bên B chấm dứt cung cấp dịch
                 vụ.
             </p>
-
-            <p style="margin: 10px 20px 0;">Ban Giám đốc và Ban quản trị (những người chịu trách nhiệm về quản trị doanh
+<p style="margin: 10px 20px 0;">Ban Giám đốc và Ban quản trị (những người chịu trách nhiệm về quản trị doanh
                 nghiệp) của bên A (trong phạm vi phù hợp) có trách nhiệm cung cấp và xác nhận bằng văn bản về các giải
                 trình
                 đã cung cấp trong quá trình kiểm toán vào "Thư giải trình của Ban Giám đốc và Ban quản trị", một trong
@@ -305,18 +283,14 @@
                 sai
                 sót liên quan đến các kỳ trước là không trọng yếu đối với tổng thể báo cáo tài chính.
             </p>
-
-            <p style="margin: 10px 20px 0;">Tạo điều kiện thuận tiện cho các nhân viên của bên B trong quá trình làm
+<p style="margin: 10px 20px 0;">Tạo điều kiện thuận tiện cho các nhân viên của bên B trong quá trình làm
                 việc
                 tại Văn phòng của bên A.</p>
-
-            <p style="margin: 10px 20px 0;">Thanh toán đầy đủ phí dịch vụ kiểm toán và các phí khác (nếu có) cho bên B
+<p style="margin: 10px 20px 0;">Thanh toán đầy đủ phí dịch vụ kiểm toán và các phí khác (nếu có) cho bên B
                 theo
                 quy định tại Điều 4 của hợp đồng này.</p>
-
-            <p style="margin: 10px 0;"><i>Trách nhiệm của bên B:</i></p>
-
-            <p style="margin: 10px 20px 0;">Bên B sẽ thực hiện công việc kiểm toán theo các chuẩn mực kiểm toán Việt
+<p style="margin: 10px 0;"><i>Trách nhiệm của bên B:</i></p>
+<p style="margin: 10px 20px 0;">Bên B sẽ thực hiện công việc kiểm toán theo các chuẩn mực kiểm toán Việt
                 Nam,
                 pháp luật và các quy định có liên quan. Các chuẩn mực kiểm toán này quy định bên B phải tuân thủ chuẩn
                 mực
@@ -333,33 +307,29 @@
                 kiểm toán cũng bao gồm việc đánh giá sự phù hợp của các chính sách kế toán đã được sử dụng và các ước
                 tính
                 kế toán của Ban Giám đốc, cũng như đánh giá việc trình bày tổng thể của báo cáo tài chính.</p>
-
-            <p style="margin: 10px 20px 0;">Bên B có trách nhiệm thông báo cho bên A về nội dung và kế hoạch kiểm toán,
+<p style="margin: 10px 20px 0;">Bên B có trách nhiệm thông báo cho bên A về nội dung và kế hoạch kiểm toán,
                 cử
                 kiểm toán viên và các trợ lý có năng lực và kinh nghiệm thực hiện kiểm toán.</p>
-
-            <p style="margin: 10px 20px 0;">Bên B thực hiện công việc kiểm toán theo nguyên tắc độc lập, khách quan và
+<p style="margin: 10px 20px 0;">Bên B thực hiện công việc kiểm toán theo nguyên tắc độc lập, khách quan và
                 bảo
                 mật số liệu. Theo đó bên B không được quyền tiết lộ cho bất kỳ một bên thứ ba nào mà không có sự đồng ý
                 của
                 bên A, ngoại trừ theo yêu cầu của pháp luật và các quy định có liên quan, hoặc trong trường hợp những
                 thông
                 tin như trên đã được các cơ quan quản lý Nhà nước phổ biến rộng rãi hoặc đã được bên A công bố. </p>
-
-            <p style="margin: 10px 20px 0;">Bên B có trách nhiệm yêu cầu bên A xác nhận các giải trình đã cung cấp cho
+<p style="margin: 10px 20px 0;">Bên B có trách nhiệm yêu cầu bên A xác nhận các giải trình đã cung cấp cho
                 bên B
                 trong quá trình thực hiện kiểm toán. Theo chuẩn mực kiểm toán Việt Nam, việc đáp ứng các yêu cầu này và
                 Thư
                 giải trình của Ban Giám đốc và Ban quản trị bên A về những vấn đề liên quan là một trong những cơ sở để
                 bên
                 B đưa ra ý kiến của mình về báo cáo tài chính của bên A.</p>
-            <p style="margin: 10px 20px 0;">Do những hạn chế vốn có của kiểm toán cũng như của kiểm soát nội bộ, có rủi
+<p style="margin: 10px 20px 0;">Do những hạn chế vốn có của kiểm toán cũng như của kiểm soát nội bộ, có rủi
                 ro
                 khó tránh khỏi là kiểm toán viên có thể không phát hiện được các sai sót trọng yếu, mặc dù cuộc kiểm
                 toán đã
                 được lập kế hoạch và thực hiện theo các chuẩn mực kiểm toán Việt Nam.</p>
-
-            <p style="margin: 10px 20px 0;">Để đánh giá rủi ro, bên B sẽ xem xét kiểm soát nội bộ mà bên A sử dụng trong
+<p style="margin: 10px 20px 0;">Để đánh giá rủi ro, bên B sẽ xem xét kiểm soát nội bộ mà bên A sử dụng trong
                 quá
                 trình lập báo cáo tài chính để thiết kế các thủ tục kiểm toán phù hợp trong từng trường hợp, nhưng không
                 nhằm mục đích đưa ra ý kiến về tính hữu hiệu của kiểm soát nội bộ của bên A. Tuy nhiên, bên B sẽ thông
@@ -367,26 +337,24 @@
                 tới bên A bằng văn bản về các khiếm khuyết nghiêm trọng trong kiểm soát nội bộ mà bên B phát hiện được
                 trong
                 quá trình kiểm toán báo cáo tài chính.</p>
-
-
-            <h3 style="margin: 20px 0 10px 0; font-weight: bold;">ĐIỀU 3: BÁO CÁO KIỂM TOÁN</h3>
-            <p style="margin: 10px 20px 0; text-align: justify;">Sau khi kết thúc kiểm toán, bên B sẽ cung cấp cho bên A
+<h3 style="margin: 20px 0 10px 0; font-weight: bold;">ĐIỀU 3: BÁO CÁO KIỂM TOÁN</h3>
+<p style="margin: 10px 20px 0; text-align: justify;">Sau khi kết thúc kiểm toán, bên B sẽ cung cấp cho bên A
                 bốn
                 (04)
                 bộ báo cáo kiểm toán kèm theo báo cáo tài
                 chính đã được kiểm toán bằng tiếng Việt.</p>
-            <p style="margin: 10px 20px 0; text-align: justify;">Báo cáo kiểm toán sẽ được lập bằng văn bản, gồm các nội
+<p style="margin: 10px 20px 0; text-align: justify;">Báo cáo kiểm toán sẽ được lập bằng văn bản, gồm các nội
                 dung
                 theo quy định của Luật kiểm toán độc lập, Chuẩn
                 mực kiểm toán Việt Nam số 700, số 705 và số 706, các chuẩn mực kiểm toán và quy định pháp lý khác có
                 liên
                 quan.</p>
-            <p style="margin: 10px 20px 0; text-align: justify;">Bên A có quyền và trách nhiệm trong việc sử dụng báo
+<p style="margin: 10px 20px 0; text-align: justify;">Bên A có quyền và trách nhiệm trong việc sử dụng báo
                 cáo
                 kiểm
                 toán theo mục đích đã nêu tại Điều 1 của Hợp
                 đồng này.</p>
-            <p style="margin: 10px 20px 0; text-align: justify;">Trong trường hợp bên A dự định phát hành báo cáo kiểm
+<p style="margin: 10px 20px 0; text-align: justify;">Trong trường hợp bên A dự định phát hành báo cáo kiểm
                 toán
                 của
                 bên B dưới bất kỳ dạng tài liệu nào, hoặc phát
@@ -395,43 +363,40 @@
                 ý rằng họ sẽ cung cấp cho bên B một bản của tài liệu này và chỉ phổ biến rộng rãi các tài liệu này sau
                 khi
                 có sự đồng ý của bên B bằng văn bản.</p>
-
-            <h3 style="margin: 20px 0 10px 0; font-weight: bold;">ĐIỀU 4: PHÍ DỊCH VỤ VÀ PHƯƠNG THỨC THANH TOÁN</h3>
-            <p style="margin: 10px 40px 0"><strong>Phí dịch vụ</strong></p>
-            <p style="margin: 10px 20px 0; text-align: justify;">Tổng phí dịch vụ cho các dịch vụ nêu tại Điều 1 là:
-                <span data-field="PhiChuaVAT">10.000.000.000&nbsp;VND</span> <span id="amount-in-words">(Bằng chữ: Mười tỷ đồng)</span>
-            </p>
-            <p style="margin: 10px 20px 0; text-align: justify;">Phí dịch vụ đã bao gồm toàn bộ các chi phí ăn, ở, đi
+<h3 style="margin: 20px 0 10px 0; font-weight: bold;">ĐIỀU 4: PHÍ DỊCH VỤ VÀ PHƯƠNG THỨC THANH TOÁN</h3>
+<p style="margin: 10px 40px 0"><strong>Phí dịch vụ</strong></p>
+<p style="margin: 10px 20px 0; text-align: justify;">Tổng phí dịch vụ cho các dịch vụ nêu tại Điều 1 là:
+                <span data-field="PhiChuaVAT">10.000.000.000 VND</span> <span id="amount-in-words">(Bằng chữ: Mười tỷ đồng)</span>
+</p>
+<p style="margin: 10px 20px 0; text-align: justify;">Phí dịch vụ đã bao gồm toàn bộ các chi phí ăn, ở, đi
                 lại và
                 phụ
                 phí khác, và chưa bao gồm thuế GTGT.</p>
-
-            <p style="margin: 10px 40px 0;"><strong>Điều khoản thanh toán</strong></p>
-            <p style="margin: 10px 20px 0; text-align: justify;">Lần 1: Tạm ứng 50% trong vòng 05 ngày làm việc kể từ
+<p style="margin: 10px 40px 0;"><strong>Điều khoản thanh toán</strong></p>
+<p style="margin: 10px 20px 0; text-align: justify;">Lần 1: Tạm ứng 50% trong vòng 05 ngày làm việc kể từ
                 ngày
                 ký hợp
                 đồng</p>
-            <p style="margin: 10px 20px 0; text-align: justify;">Lần 2: Thanh toán 50% còn lại trong vòng 05 ngày làm
+<p style="margin: 10px 20px 0; text-align: justify;">Lần 2: Thanh toán 50% còn lại trong vòng 05 ngày làm
                 việc
                 sau khi
                 Bên B phát hành Báo cáo kiểm toán cho Bên
                 A.</p>
-            <p style="margin: 10px 20px 0; text-align: justify;">Phí kiểm toán sẽ được thanh toán bằng chuyển khoản trực
+<p style="margin: 10px 20px 0; text-align: justify;">Phí kiểm toán sẽ được thanh toán bằng chuyển khoản trực
                 tiếp vào
                 tài khoản của Bên B.</p>
-            <p style="margin: 10px 20px 0; text-align: justify;">Bên B sẽ phát hành hóa đơn GTGT cho bên A phù hợp với
+<p style="margin: 10px 20px 0; text-align: justify;">Bên B sẽ phát hành hóa đơn GTGT cho bên A phù hợp với
                 quy
                 định
                 của pháp luật thuế hiện hành</p>
-
-            <h3 style="margin: 20px 0 10px 0; font-weight: bold;">ĐIỀU 5: CAM KẾT THỰC HIỆN</h3>
-            <p style="margin: 10px 20px 0; text-align: justify;">Hai Bên cam kết thực hiện tất cả các điều khoản đã ghi
+<h3 style="margin: 20px 0 10px 0; font-weight: bold;">ĐIỀU 5: CAM KẾT THỰC HIỆN</h3>
+<p style="margin: 10px 20px 0; text-align: justify;">Hai Bên cam kết thực hiện tất cả các điều khoản đã ghi
                 trong Hợp
                 đồng. Trong quá trình thực hiện, nếu phát
                 sinh vướng mắc, hai Bên phải kịp thời thông báo cho nhau để cùng tìm phương án giải quyết. Mọi thay đổi
                 phải
                 được thông báo trực tiếp cho mỗi bên bằng văn bản (hoặc qua email) theo địa chỉ trên đây.</p>
-            <p style="margin: 10px 20px 0; text-align: justify;">Thời gian hoàn thành cuộc kiểm toán dự kiến là 30 ngày
+<p style="margin: 10px 20px 0; text-align: justify;">Thời gian hoàn thành cuộc kiểm toán dự kiến là 30 ngày
                 kể
                 từ
                 ngày bắt đầu thực hiện cuộc kiểm toán với điều
@@ -439,172 +404,157 @@
                 cung cấp đầy đủ thông tin, tài liệu theo yêu cầu của Bên B và thống nhất hướng giải quyết các vấn đề
                 phát
                 sinh trong quá trình kiểm toán.</p>
-            <p style="margin: 10px 20px 0; text-align: justify;">Mọi tranh chấp hoặc khiếu kiện phát sinh trong quá
+<p style="margin: 10px 20px 0; text-align: justify;">Mọi tranh chấp hoặc khiếu kiện phát sinh trong quá
                 trình
                 thực
                 hiện hợp đồng sẽ được giải quyết bằng thương
                 lượng hoặc theo Bộ luật dân sự nước Cộng hoà xã hội chủ nghĩa Việt Nam và tại tòa án kinh tế do hai bên
                 lựa
                 chọn.</p>
-
-            <h3 style="margin: 20px 0 10px 0; font-weight: bold;">ĐIỀU 6: HIỆU LỰC, NGÔN NGỮ VÀ THỜI HẠN HỢP ĐỒNG</h3>
-            <p style="margin: 10px 20px 0; text-align: justify;">Hợp đồng này được lập thành 04 bản bằng tiếng Việt, mỗi
+<h3 style="margin: 20px 0 10px 0; font-weight: bold;">ĐIỀU 6: HIỆU LỰC, NGÔN NGỮ VÀ THỜI HẠN HỢP ĐỒNG</h3>
+<p style="margin: 10px 20px 0; text-align: justify;">Hợp đồng này được lập thành 04 bản bằng tiếng Việt, mỗi
                 Bên
                 giữ
                 02 bản, và có hiệu lực kể từ ngày có đủ chữ
                 ký, con dấu của hai Bên.</p>
-
-            <table style="width: 100%; margin-top: 30px; border-collapse: collapse;">
-                <tbody><tr>
-                    <td style="width: 45%; text-align: center;">
-                        <p style="font-weight: bold; margin: 10px 0;">ĐẠI DIỆN BÊN A</p>
-                    </td>
-                    <td style="width: 10%;"></td>
-                    <td style="width: 45%; text-align: center;">
-                        <p style="font-weight: bold; margin: 10px 0;">ĐẠI DIỆN BÊN B</p>
-                    </td>
-                </tr>
-            </tbody></table>
-        </div>
-    
-        <table style="width: 100%; border-collapse: collapse;">
-            <tbody><tr>
-                <td colspan="2">
-                    <h3 style="text-align: center; margin: 0;">CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM</h3>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <h3 style="text-align: center; margin: 0;">Độc lập - Tự do - Hạnh phúc</h3>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <p style="text-align: center; margin: 0;">------o0o------</p>
-                </td>
-            </tr>
-            <tr>
-                <td style="width: 50%">
-                    <p style="margin: 0;">Số: <span data-field="SoHopDong">030425.03/HDKT-IVC</span></p>
-                </td>
-            </tr>
-            <tr>
-                <td style="width: 50%"></td>
-                <td style="width: 50%; text-align: right;">
-                    <p style="margin: 0;"><i>Hà Nội, <span data-field="NgayHopDong">ngày 03 tháng 04 năm 2025</span></i></p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <h2 style="text-align: center; margin: 10px 0 0 0;">HỢP ĐỒNG KIỂM TOÁN</h2>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <p style="text-align: center; margin: 0;"><i>(V/v: <span data-field="NoiDungHopDong">aaa</span>)</i>
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <p style="text-align: center; margin: 0;">của <span data-field="TenKH">CÔNG TY TNHH CHENG TONG VIỆT NAM</span></p>
-                </td>
-            </tr>
-        </tbody></table>
-
-        
-        <br>
-        <i style="margin: 5px 0;">● Căn cứ Bộ luật dân sự số 91/2015/QH13 ngày 24/11/2015;</i> <br>
-        <i style="margin: 5px 0;">● Căn cứ Luật thương mại số 36/2005/QH11 ngày 14/6/2005;</i><br>
-        <i style="margin: 5px 0;">● Căn cứ Luật kiểm toán độc lập số 67/2011/QH12 ngày 29/3/2011;</i><br>
-        <i style="margin: 5px 0;">● Căn cứ Nghị định 17/2012/NĐ - CP ngày 13/3/2012 của Chính phủ quy định chi tiết và
+<table style="width: 100%; margin-top: 30px; border-collapse: collapse;">
+<tbody><tr>
+<td style="width: 45%; text-align: center;">
+<p style="font-weight: bold; margin: 10px 0;">ĐẠI DIỆN BÊN A</p>
+</td>
+<td style="width: 10%;"></td>
+<td style="width: 45%; text-align: center;">
+<p style="font-weight: bold; margin: 10px 0;">ĐẠI DIỆN BÊN B</p>
+</td>
+</tr>
+</tbody></table>
+</div>
+<table style="width: 100%; border-collapse: collapse;">
+<tbody><tr>
+<td colspan="2">
+<h3 style="text-align: center; margin: 0;">CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM</h3>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<h3 style="text-align: center; margin: 0;">Độc lập - Tự do - Hạnh phúc</h3>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<p style="text-align: center; margin: 0;">------o0o------</p>
+</td>
+</tr>
+<tr>
+<td style="width: 50%">
+<p style="margin: 0;">Số: </p>
+</td>
+</tr>
+<tr>
+<td style="width: 50%"></td>
+<td style="width: 50%; text-align: right;">
+<p style="margin: 0;"><i>Hà Nội, </i></p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<h2 style="text-align: center; margin: 10px 0 0 0;">HỢP ĐỒNG KIỂM TOÁN</h2>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<p style="text-align: center; margin: 0;"><i>(V/v: )</i>
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<p style="text-align: center; margin: 0;">của </p>
+</td>
+</tr>
+</tbody></table>
+<br/>
+<i style="margin: 5px 0;">● Căn cứ Bộ luật dân sự số 91/2015/QH13 ngày 24/11/2015;</i> <br/>
+<i style="margin: 5px 0;">● Căn cứ Luật thương mại số 36/2005/QH11 ngày 14/6/2005;</i><br/>
+<i style="margin: 5px 0;">● Căn cứ Luật kiểm toán độc lập số 67/2011/QH12 ngày 29/3/2011;</i><br/>
+<i style="margin: 5px 0;">● Căn cứ Nghị định 17/2012/NĐ - CP ngày 13/3/2012 của Chính phủ quy định chi tiết và
             hướng dẫn thi hành một số
-            điều của Luật kiểm toán độc lập;</i><br>
-        <i style="margin: 5px 0;">● Căn cứ Chuẩn mực kiểm toán Việt Nam số 210 về Hợp đồng kiểm toán;</i><br>
-        <i style="margin: 5px 0;">● Căn cứ vào yêu cầu của <span data-field="TenKH">CÔNG TY TNHH CHENG TONG VIỆT NAM</span>;</i><br>
-
-
-        <p style="margin-top: 20px;">Hôm nay, <span data-field="NgayHopDong">ngày 03 tháng 04 năm 2025</span>, chúng tôi gồm có:</p>
-
-        
-        <div style="margin-top: 20px;">
-            <p style="margin: 0; font-weight: bold;">BÊN A : <span data-field="TenKH">CÔNG TY TNHH CHENG TONG VIỆT NAM</span></p>
-            <table style="margin-left: 40px; border-collapse: collapse;">
-                <tbody><tr>
-                    <td style="width: 120px; padding: 5px 0; font-weight: bold;">Người đại diện</td>
-                    <td style="padding: 5px 0; font-weight: bold;"> : <span data-field="NguoiDaiDienKH"></span></td>
-                </tr>
-                <tr>
-                    <td style="width: 120px; padding: 5px 0;">Chức vụ</td>
-                    <td style="padding: 5px 0;"> : <span data-field="ChucVuKH"></span></td>
-                </tr>
-                <tr>
-                    <td style="width: 120px; padding: 5px 0;">Địa chỉ</td>
-                    <td style="padding: 5px 0;"> : <span data-field="DiaChiKH"></span></td>
-                </tr>
-                <tr>
-                    <td style="width: 120px; padding: 5px 0;">Mã số thuế</td>
-                    <td style="padding: 5px 0;"> : <span data-field="MST_KH"></span></td>
-                </tr>
-                <tr>
-                    <td style="width: 120px; padding: 5px 0;">Tài khoản số</td>
-                    <td style="padding: 5px 0;"> : <span data-field="SoTK_NganHang"></span></td>
-                </tr>
-                <tr>
-                    <td style="width: 120px; padding: 5px 0;">Tại Ngân hàng</td>
-                    <td style="padding: 5px 0;"> : <span data-field="TaiNganHang"></span></td>
-                </tr>
-            </tbody></table>
-        </div>
-
-        
-        <div style="margin-top: 25px;">
-            <p style="margin: 0; font-weight: bold; ">BÊN B: CÔNG TY TNHH KIỂM TOÁN IVC</p>
-            <table style="margin-left: 40px; border-collapse: collapse;">
-                <tbody><tr>
-                    <td style="width: 120px; padding: 5px 0; font-weight: bold;">Người đại diện</td>
-                    <td style="padding: 5px 0; font-weight: bold;"> : Ông Phạm Duy Hiệp</td>
-                </tr>
-                <tr>
-                    <td style="width: 120px; padding: 5px 0;">Chức vụ</td>
-                    <td style="padding: 5px 0;"> : Phó Tổng Giám đốc</td>
-                </tr>
-                <tr>
-                    <td style="width: 120px; padding: 5px 0;">Địa chỉ</td>
-                    <td style="padding: 5px 0;"> : Tầng 2, số 1 ngõ 2 Láng Hạ, phường Thành Công, quận Ba Đình, thành
+            điều của Luật kiểm toán độc lập;</i><br/>
+<i style="margin: 5px 0;">● Căn cứ Chuẩn mực kiểm toán Việt Nam số 210 về Hợp đồng kiểm toán;</i><br/>
+<i style="margin: 5px 0;">● Căn cứ vào yêu cầu của ;</i><br/>
+<p style="margin-top: 20px;">Hôm nay, , chúng tôi gồm có:</p>
+<div style="margin-top: 20px;">
+<p style="margin: 0; font-weight: bold;">BÊN A : </p>
+<table style="margin-left: 40px; border-collapse: collapse;">
+<tbody><tr>
+<td style="width: 120px; padding: 5px 0; font-weight: bold;">Người đại diện</td>
+<td style="padding: 5px 0; font-weight: bold;"> : </td>
+</tr>
+<tr>
+<td style="width: 120px; padding: 5px 0;">Chức vụ</td>
+<td style="padding: 5px 0;"> : </td>
+</tr>
+<tr>
+<td style="width: 120px; padding: 5px 0;">Địa chỉ</td>
+<td style="padding: 5px 0;"> : </td>
+</tr>
+<tr>
+<td style="width: 120px; padding: 5px 0;">Mã số thuế</td>
+<td style="padding: 5px 0;"> : </td>
+</tr>
+<tr>
+<td style="width: 120px; padding: 5px 0;">Tài khoản số</td>
+<td style="padding: 5px 0;"> : </td>
+</tr>
+<tr>
+<td style="width: 120px; padding: 5px 0;">Tại Ngân hàng</td>
+<td style="padding: 5px 0;"> : </td>
+</tr>
+</tbody></table>
+</div>
+<div style="margin-top: 25px;">
+<p style="margin: 0; font-weight: bold; ">BÊN B: CÔNG TY TNHH KIỂM TOÁN IVC</p>
+<table style="margin-left: 40px; border-collapse: collapse;">
+<tbody><tr>
+<td style="width: 120px; padding: 5px 0; font-weight: bold;">Người đại diện</td>
+<td style="padding: 5px 0; font-weight: bold;"> : Ông Phạm Duy Hiệp</td>
+</tr>
+<tr>
+<td style="width: 120px; padding: 5px 0;">Chức vụ</td>
+<td style="padding: 5px 0;"> : Phó Tổng Giám đốc</td>
+</tr>
+<tr>
+<td style="width: 120px; padding: 5px 0;">Địa chỉ</td>
+<td style="padding: 5px 0;"> : Tầng 2, số 1 ngõ 2 Láng Hạ, phường Thành Công, quận Ba Đình, thành
                         phố Hà
                         Nội</td>
-                </tr>
-                <tr>
-                    <td style="width: 120px; padding: 5px 0;">Điện thoại</td>
-                    <td style="padding: 5px 0;"> : 0943 863 073</td>
-                </tr>
-                <tr>
-                    <td style="width: 120px; padding: 5px 0;">Mã số thuế</td>
-                    <td style="padding: 5px 0;"> : 0109564702</td>
-                </tr>
-                <tr>
-                    <td style="width: 120px; padding: 5px 0;">Tài khoản số</td>
-                    <td style="padding: 5px 0;"> : 0909597168888</td>
-                </tr>
-                <tr>
-                    <td style="width: 120px; padding: 5px 0;">Tại Ngân hàng</td>
-                    <td style="padding: 5px 0;"> : Ngân hàng TMCP Quân Đội - CN Hoài Đức</td>
-                </tr>
-            </tbody></table>
-        </div>
-
-
-        <p style="margin: 10px 20px 0;">Sau khi bàn bạc và thương lượng, hai bên cùng thỏa thuận ký kết hợp đồng gồm các
+</tr>
+<tr>
+<td style="width: 120px; padding: 5px 0;">Điện thoại</td>
+<td style="padding: 5px 0;"> : 0943 863 073</td>
+</tr>
+<tr>
+<td style="width: 120px; padding: 5px 0;">Mã số thuế</td>
+<td style="padding: 5px 0;"> : 0109564702</td>
+</tr>
+<tr>
+<td style="width: 120px; padding: 5px 0;">Tài khoản số</td>
+<td style="padding: 5px 0;"> : 0909597168888</td>
+</tr>
+<tr>
+<td style="width: 120px; padding: 5px 0;">Tại Ngân hàng</td>
+<td style="padding: 5px 0;"> : Ngân hàng TMCP Quân Đội - CN Hoài Đức</td>
+</tr>
+</tbody></table>
+</div>
+<p style="margin: 10px 20px 0;">Sau khi bàn bạc và thương lượng, hai bên cùng thỏa thuận ký kết hợp đồng gồm các
             điều
             khoản như sau:</p>
-
-        
-        <div style="margin-top: 20px; line-height: 1.6; text-align: justify;">
-            <h3 style="margin: 20px 0 10px 0; font-weight: bold;">ĐIỀU 1: NỘI DUNG HỢP ĐỒNG</h3>
-            <p style="margin: 10px 20px 0;">Bên B đồng ý cung cấp cho bên A dịch vụ <span data-field="NoiDungHopDong">aaa</span>,
+<div style="margin-top: 20px; line-height: 1.6; text-align: justify;">
+<h3 style="margin: 20px 0 10px 0; font-weight: bold;">ĐIỀU 1: NỘI DUNG HỢP ĐỒNG</h3>
+<p style="margin: 10px 20px 0;">Bên B đồng ý cung cấp cho bên A dịch vụ ,
                 bao gồm Bảng cân đối kế
-                toán tại ngày <span data-field="NamKiT">111</span>, Báo cáo kết quả hoạt động kinh doanh, Báo cáo lưu
+                toán tại ngày , Báo cáo kết quả hoạt động kinh doanh, Báo cáo lưu
                 chuyển
                 tiền tệ và Bản thuyết minh báo cáo tài chính cho năm tài chính kết thúc cùng ngày. Cuộc kiểm toán của
                 bên B
@@ -613,75 +563,65 @@
                 theo báo cáo kiểm toán chỉ được bên A sử dụng cho mục đích quản trị và nộp cho các cơ quan chức năng
                 theo
                 quy định.</p>
-
-            <p style="margin: 10px 20px 0;">Báo cáo tài chính được lập phù hợp các Chuẩn mực kế toán Việt Nam, Chế độ kế
+<p style="margin: 10px 20px 0;">Báo cáo tài chính được lập phù hợp các Chuẩn mực kế toán Việt Nam, Chế độ kế
                 toán
                 doanh nghiệp Việt Nam và
                 các quy định pháp lý có liên quan đến việc lập và trình bày báo cáo tài chính.</p>
-
-            <p style="margin: 10px 20px 0;">Việc kiểm toán báo cáo tài chính cho năm tài chính kết thúc ngày <span data-field="NamKiT">111</span>, Bên B
+<p style="margin: 10px 20px 0;">Việc kiểm toán báo cáo tài chính cho năm tài chính kết thúc ngày , Bên B
                 sẽ kiểm toán báo cáo tài chính của Bên A theo các Chuẩn mực kiểm toán Việt Nam.</p>
-
-            <h3 style="margin: 20px 0 10px 0; font-weight: bold;">ĐIỀU 2: TRÁCH NHIỆM CỦA CÁC BÊN</h3>
-            <p style="margin: 10px 0;"><i>Trách nhiệm của bên A:</i></p>
-
-            <p style="margin: 10px 20px 0;">Cuộc kiểm toán của bên B sẽ được thực hiện trên cơ sở Ban Giám đốc và những
+<h3 style="margin: 20px 0 10px 0; font-weight: bold;">ĐIỀU 2: TRÁCH NHIỆM CỦA CÁC BÊN</h3>
+<p style="margin: 10px 0;"><i>Trách nhiệm của bên A:</i></p>
+<p style="margin: 10px 20px 0;">Cuộc kiểm toán của bên B sẽ được thực hiện trên cơ sở Ban Giám đốc và những
                 người
                 chịu trách nhiệm về quản
                 trị doanh nghiệp (trong phạm vi phù hợp) của Bên A hiểu và thừa nhận có trách nhiệm:</p>
-
-            <ol type="a" style="margin-left: 20px; padding-left: 20px;">
-                <li style="margin: 10px 20px 0;">Đối với việc lập và trình bày báo cáo tài chính trung thực và hợp lý,
+<ol style="margin-left: 20px; padding-left: 20px;" type="a">
+<li style="margin: 10px 20px 0;">Đối với việc lập và trình bày báo cáo tài chính trung thực và hợp lý,
                     phù
                     hợp
                     với các chuẩn mực kế toán
                     Việt Nam, chế độ kế toán (doanh nghiệp) Việt Nam và các quy định pháp lý có liên quan đến lập và
                     trình
                     bày báo cáo tài chính được áp dụng;</li>
-
-                <li style="margin: 10px 20px 0;">Xây dựng và duy trì kiểm soát nội bộ mà Ban Giám đốc và Ban quản trị
+<li style="margin: 10px 20px 0;">Xây dựng và duy trì kiểm soát nội bộ mà Ban Giám đốc và Ban quản trị
                     (trong phạm vi phù hợp) xác định là cần thiết để đảm bảo cho việc lập và trình bày báo cáo tài chính
                     không còn sai sót trọng yếu do gian lận hoặc do nhầm lẫn;</li>
-
-                <li style="margin: 10px 20px 0;">Đảm bảo các sổ kế toán và chứng từ kế toán thích hợp được lưu giữ để
+<li style="margin: 10px 20px 0;">Đảm bảo các sổ kế toán và chứng từ kế toán thích hợp được lưu giữ để
                     phản
                     ánh
                     tình hình tài chính của
                     Công ty, với mức độ chính xác hợp lý, tại bất kỳ thời điểm nào và đảm bảo rằng các sổ kế toán tuân
                     thủ
                     với chế độ kế toán đã được áp dụng;</li>
-
-                <li style="margin: 10px 20px 0;">Đảm bảo cung cấp kịp thời cho bên B:
-                    <ol type="i" style="list-style-type: lower-roman; margin-left: 20px; padding-left: 20px;">
-                        <li style="margin: 5px 0;">Quyền tiếp cận với tất cả tài liệu, thông tin mà Ban Giám đốc nhận
+<li style="margin: 10px 20px 0;">Đảm bảo cung cấp kịp thời cho bên B:
+                    <ol style="list-style-type: lower-roman; margin-left: 20px; padding-left: 20px;" type="i">
+<li style="margin: 5px 0;">Quyền tiếp cận với tất cả tài liệu, thông tin mà Ban Giám đốc nhận
                             thấy
                             là có liên quan đến quá
                             trình lập và trình bày báo cáo tài chính như chứng từ kế toán, sổ kế toán, tài liệu và các
                             vấn
                             đề khác;</li>
-                        <li style="margin: 5px 0;">Các thông tin bổ sung mà kiểm toán viên và doanh nghiệp kiểm toán yêu
+<li style="margin: 5px 0;">Các thông tin bổ sung mà kiểm toán viên và doanh nghiệp kiểm toán yêu
                             cầu
                             Ban Giám đốc cung cấp
                             hoặc giải trình để phục vụ cho mục đích của cuộc kiểm toán;</li>
-                        <li style="margin: 5px 0;">Quyền tiếp cận không hạn chế đối với nhân sự của bên A mà kiểm toán
+<li style="margin: 5px 0;">Quyền tiếp cận không hạn chế đối với nhân sự của bên A mà kiểm toán
                             viên
                             và doanh nghiệp kiểm
                             toán xác định là cần thiết để thu thập bằng chứng kiểm toán. Bố trí nhân sự liên quan cùng
                             làm
                             việc với bên B trong quá trình kiểm toán.</li>
-                    </ol>
-                </li>
-            </ol>
-
-            <p style="margin: 10px 20px 0;">Việc Ban Giám đốc không thể cung cấp cho Bên B các thông tin được đề cập như
+</ol>
+</li>
+</ol>
+<p style="margin: 10px 20px 0;">Việc Ban Giám đốc không thể cung cấp cho Bên B các thông tin được đề cập như
                 trên
                 hoặc quyền trao đổi với
                 nhân viên trong Công ty của Bên A có thể gây chậm hoàn thành công việc và phát hành báo cáo của Bên B,
                 và/hoặc thay đổi phạm vi các thủ tục kiểm toán, hoặc thậm chí dẫn tới việc Bên B chấm dứt cung cấp dịch
                 vụ.
             </p>
-
-            <p style="margin: 10px 20px 0;">Ban Giám đốc và Ban quản trị (những người chịu trách nhiệm về quản trị doanh
+<p style="margin: 10px 20px 0;">Ban Giám đốc và Ban quản trị (những người chịu trách nhiệm về quản trị doanh
                 nghiệp) của bên A (trong phạm vi phù hợp) có trách nhiệm cung cấp và xác nhận bằng văn bản về các giải
                 trình
                 đã cung cấp trong quá trình kiểm toán vào "Thư giải trình của Ban Giám đốc và Ban quản trị", một trong
@@ -694,18 +634,14 @@
                 sai
                 sót liên quan đến các kỳ trước là không trọng yếu đối với tổng thể báo cáo tài chính.
             </p>
-
-            <p style="margin: 10px 20px 0;">Tạo điều kiện thuận tiện cho các nhân viên của bên B trong quá trình làm
+<p style="margin: 10px 20px 0;">Tạo điều kiện thuận tiện cho các nhân viên của bên B trong quá trình làm
                 việc
                 tại Văn phòng của bên A.</p>
-
-            <p style="margin: 10px 20px 0;">Thanh toán đầy đủ phí dịch vụ kiểm toán và các phí khác (nếu có) cho bên B
+<p style="margin: 10px 20px 0;">Thanh toán đầy đủ phí dịch vụ kiểm toán và các phí khác (nếu có) cho bên B
                 theo
                 quy định tại Điều 4 của hợp đồng này.</p>
-
-            <p style="margin: 10px 0;"><i>Trách nhiệm của bên B:</i></p>
-
-            <p style="margin: 10px 20px 0;">Bên B sẽ thực hiện công việc kiểm toán theo các chuẩn mực kiểm toán Việt
+<p style="margin: 10px 0;"><i>Trách nhiệm của bên B:</i></p>
+<p style="margin: 10px 20px 0;">Bên B sẽ thực hiện công việc kiểm toán theo các chuẩn mực kiểm toán Việt
                 Nam,
                 pháp luật và các quy định có liên quan. Các chuẩn mực kiểm toán này quy định bên B phải tuân thủ chuẩn
                 mực
@@ -722,33 +658,29 @@
                 kiểm toán cũng bao gồm việc đánh giá sự phù hợp của các chính sách kế toán đã được sử dụng và các ước
                 tính
                 kế toán của Ban Giám đốc, cũng như đánh giá việc trình bày tổng thể của báo cáo tài chính.</p>
-
-            <p style="margin: 10px 20px 0;">Bên B có trách nhiệm thông báo cho bên A về nội dung và kế hoạch kiểm toán,
+<p style="margin: 10px 20px 0;">Bên B có trách nhiệm thông báo cho bên A về nội dung và kế hoạch kiểm toán,
                 cử
                 kiểm toán viên và các trợ lý có năng lực và kinh nghiệm thực hiện kiểm toán.</p>
-
-            <p style="margin: 10px 20px 0;">Bên B thực hiện công việc kiểm toán theo nguyên tắc độc lập, khách quan và
+<p style="margin: 10px 20px 0;">Bên B thực hiện công việc kiểm toán theo nguyên tắc độc lập, khách quan và
                 bảo
                 mật số liệu. Theo đó bên B không được quyền tiết lộ cho bất kỳ một bên thứ ba nào mà không có sự đồng ý
                 của
                 bên A, ngoại trừ theo yêu cầu của pháp luật và các quy định có liên quan, hoặc trong trường hợp những
                 thông
                 tin như trên đã được các cơ quan quản lý Nhà nước phổ biến rộng rãi hoặc đã được bên A công bố. </p>
-
-            <p style="margin: 10px 20px 0;">Bên B có trách nhiệm yêu cầu bên A xác nhận các giải trình đã cung cấp cho
+<p style="margin: 10px 20px 0;">Bên B có trách nhiệm yêu cầu bên A xác nhận các giải trình đã cung cấp cho
                 bên B
                 trong quá trình thực hiện kiểm toán. Theo chuẩn mực kiểm toán Việt Nam, việc đáp ứng các yêu cầu này và
                 Thư
                 giải trình của Ban Giám đốc và Ban quản trị bên A về những vấn đề liên quan là một trong những cơ sở để
                 bên
                 B đưa ra ý kiến của mình về báo cáo tài chính của bên A.</p>
-            <p style="margin: 10px 20px 0;">Do những hạn chế vốn có của kiểm toán cũng như của kiểm soát nội bộ, có rủi
+<p style="margin: 10px 20px 0;">Do những hạn chế vốn có của kiểm toán cũng như của kiểm soát nội bộ, có rủi
                 ro
                 khó tránh khỏi là kiểm toán viên có thể không phát hiện được các sai sót trọng yếu, mặc dù cuộc kiểm
                 toán đã
                 được lập kế hoạch và thực hiện theo các chuẩn mực kiểm toán Việt Nam.</p>
-
-            <p style="margin: 10px 20px 0;">Để đánh giá rủi ro, bên B sẽ xem xét kiểm soát nội bộ mà bên A sử dụng trong
+<p style="margin: 10px 20px 0;">Để đánh giá rủi ro, bên B sẽ xem xét kiểm soát nội bộ mà bên A sử dụng trong
                 quá
                 trình lập báo cáo tài chính để thiết kế các thủ tục kiểm toán phù hợp trong từng trường hợp, nhưng không
                 nhằm mục đích đưa ra ý kiến về tính hữu hiệu của kiểm soát nội bộ của bên A. Tuy nhiên, bên B sẽ thông
@@ -756,26 +688,24 @@
                 tới bên A bằng văn bản về các khiếm khuyết nghiêm trọng trong kiểm soát nội bộ mà bên B phát hiện được
                 trong
                 quá trình kiểm toán báo cáo tài chính.</p>
-
-
-            <h3 style="margin: 20px 0 10px 0; font-weight: bold;">ĐIỀU 3: BÁO CÁO KIỂM TOÁN</h3>
-            <p style="margin: 10px 20px 0; text-align: justify;">Sau khi kết thúc kiểm toán, bên B sẽ cung cấp cho bên A
+<h3 style="margin: 20px 0 10px 0; font-weight: bold;">ĐIỀU 3: BÁO CÁO KIỂM TOÁN</h3>
+<p style="margin: 10px 20px 0; text-align: justify;">Sau khi kết thúc kiểm toán, bên B sẽ cung cấp cho bên A
                 bốn
                 (04)
                 bộ báo cáo kiểm toán kèm theo báo cáo tài
                 chính đã được kiểm toán bằng tiếng Việt.</p>
-            <p style="margin: 10px 20px 0; text-align: justify;">Báo cáo kiểm toán sẽ được lập bằng văn bản, gồm các nội
+<p style="margin: 10px 20px 0; text-align: justify;">Báo cáo kiểm toán sẽ được lập bằng văn bản, gồm các nội
                 dung
                 theo quy định của Luật kiểm toán độc lập, Chuẩn
                 mực kiểm toán Việt Nam số 700, số 705 và số 706, các chuẩn mực kiểm toán và quy định pháp lý khác có
                 liên
                 quan.</p>
-            <p style="margin: 10px 20px 0; text-align: justify;">Bên A có quyền và trách nhiệm trong việc sử dụng báo
+<p style="margin: 10px 20px 0; text-align: justify;">Bên A có quyền và trách nhiệm trong việc sử dụng báo
                 cáo
                 kiểm
                 toán theo mục đích đã nêu tại Điều 1 của Hợp
                 đồng này.</p>
-            <p style="margin: 10px 20px 0; text-align: justify;">Trong trường hợp bên A dự định phát hành báo cáo kiểm
+<p style="margin: 10px 20px 0; text-align: justify;">Trong trường hợp bên A dự định phát hành báo cáo kiểm
                 toán
                 của
                 bên B dưới bất kỳ dạng tài liệu nào, hoặc phát
@@ -784,43 +714,40 @@
                 ý rằng họ sẽ cung cấp cho bên B một bản của tài liệu này và chỉ phổ biến rộng rãi các tài liệu này sau
                 khi
                 có sự đồng ý của bên B bằng văn bản.</p>
-
-            <h3 style="margin: 20px 0 10px 0; font-weight: bold;">ĐIỀU 4: PHÍ DỊCH VỤ VÀ PHƯƠNG THỨC THANH TOÁN</h3>
-            <p style="margin: 10px 40px 0"><strong>Phí dịch vụ</strong></p>
-            <p style="margin: 10px 20px 0; text-align: justify;">Tổng phí dịch vụ cho các dịch vụ nêu tại Điều 1 là:
-                <span data-field="PhiChuaVAT">10.000.000.000&nbsp;VND</span> <span id="amount-in-words">(Bằng chữ: Mười tỷ đồng)</span>
-            </p>
-            <p style="margin: 10px 20px 0; text-align: justify;">Phí dịch vụ đã bao gồm toàn bộ các chi phí ăn, ở, đi
+<h3 style="margin: 20px 0 10px 0; font-weight: bold;">ĐIỀU 4: PHÍ DỊCH VỤ VÀ PHƯƠNG THỨC THANH TOÁN</h3>
+<p style="margin: 10px 40px 0"><strong>Phí dịch vụ</strong></p>
+<p style="margin: 10px 20px 0; text-align: justify;">Tổng phí dịch vụ cho các dịch vụ nêu tại Điều 1 là:
+                 <span id="amount-in-words">(Bằng chữ: Mười tỷ đồng)</span>
+</p>
+<p style="margin: 10px 20px 0; text-align: justify;">Phí dịch vụ đã bao gồm toàn bộ các chi phí ăn, ở, đi
                 lại và
                 phụ
                 phí khác, và chưa bao gồm thuế GTGT.</p>
-
-            <p style="margin: 10px 40px 0;"><strong>Điều khoản thanh toán</strong></p>
-            <p style="margin: 10px 20px 0; text-align: justify;">Lần 1: Tạm ứng 50% trong vòng 05 ngày làm việc kể từ
+<p style="margin: 10px 40px 0;"><strong>Điều khoản thanh toán</strong></p>
+<p style="margin: 10px 20px 0; text-align: justify;">Lần 1: Tạm ứng 50% trong vòng 05 ngày làm việc kể từ
                 ngày
                 ký hợp
                 đồng</p>
-            <p style="margin: 10px 20px 0; text-align: justify;">Lần 2: Thanh toán 50% còn lại trong vòng 05 ngày làm
+<p style="margin: 10px 20px 0; text-align: justify;">Lần 2: Thanh toán 50% còn lại trong vòng 05 ngày làm
                 việc
                 sau khi
                 Bên B phát hành Báo cáo kiểm toán cho Bên
                 A.</p>
-            <p style="margin: 10px 20px 0; text-align: justify;">Phí kiểm toán sẽ được thanh toán bằng chuyển khoản trực
+<p style="margin: 10px 20px 0; text-align: justify;">Phí kiểm toán sẽ được thanh toán bằng chuyển khoản trực
                 tiếp vào
                 tài khoản của Bên B.</p>
-            <p style="margin: 10px 20px 0; text-align: justify;">Bên B sẽ phát hành hóa đơn GTGT cho bên A phù hợp với
+<p style="margin: 10px 20px 0; text-align: justify;">Bên B sẽ phát hành hóa đơn GTGT cho bên A phù hợp với
                 quy
                 định
                 của pháp luật thuế hiện hành</p>
-
-            <h3 style="margin: 20px 0 10px 0; font-weight: bold;">ĐIỀU 5: CAM KẾT THỰC HIỆN</h3>
-            <p style="margin: 10px 20px 0; text-align: justify;">Hai Bên cam kết thực hiện tất cả các điều khoản đã ghi
+<h3 style="margin: 20px 0 10px 0; font-weight: bold;">ĐIỀU 5: CAM KẾT THỰC HIỆN</h3>
+<p style="margin: 10px 20px 0; text-align: justify;">Hai Bên cam kết thực hiện tất cả các điều khoản đã ghi
                 trong Hợp
                 đồng. Trong quá trình thực hiện, nếu phát
                 sinh vướng mắc, hai Bên phải kịp thời thông báo cho nhau để cùng tìm phương án giải quyết. Mọi thay đổi
                 phải
                 được thông báo trực tiếp cho mỗi bên bằng văn bản (hoặc qua email) theo địa chỉ trên đây.</p>
-            <p style="margin: 10px 20px 0; text-align: justify;">Thời gian hoàn thành cuộc kiểm toán dự kiến là 30 ngày
+<p style="margin: 10px 20px 0; text-align: justify;">Thời gian hoàn thành cuộc kiểm toán dự kiến là 30 ngày
                 kể
                 từ
                 ngày bắt đầu thực hiện cuộc kiểm toán với điều
@@ -828,35 +755,32 @@
                 cung cấp đầy đủ thông tin, tài liệu theo yêu cầu của Bên B và thống nhất hướng giải quyết các vấn đề
                 phát
                 sinh trong quá trình kiểm toán.</p>
-            <p style="margin: 10px 20px 0; text-align: justify;">Mọi tranh chấp hoặc khiếu kiện phát sinh trong quá
+<p style="margin: 10px 20px 0; text-align: justify;">Mọi tranh chấp hoặc khiếu kiện phát sinh trong quá
                 trình
                 thực
                 hiện hợp đồng sẽ được giải quyết bằng thương
                 lượng hoặc theo Bộ luật dân sự nước Cộng hoà xã hội chủ nghĩa Việt Nam và tại tòa án kinh tế do hai bên
                 lựa
                 chọn.</p>
-
-            <h3 style="margin: 20px 0 10px 0; font-weight: bold;">ĐIỀU 6: HIỆU LỰC, NGÔN NGỮ VÀ THỜI HẠN HỢP ĐỒNG</h3>
-            <p style="margin: 10px 20px 0; text-align: justify;">Hợp đồng này được lập thành 04 bản bằng tiếng Việt, mỗi
+<h3 style="margin: 20px 0 10px 0; font-weight: bold;">ĐIỀU 6: HIỆU LỰC, NGÔN NGỮ VÀ THỜI HẠN HỢP ĐỒNG</h3>
+<p style="margin: 10px 20px 0; text-align: justify;">Hợp đồng này được lập thành 04 bản bằng tiếng Việt, mỗi
                 Bên
                 giữ
                 02 bản, và có hiệu lực kể từ ngày có đủ chữ
                 ký, con dấu của hai Bên.</p>
-
-            <table style="width: 100%; margin-top: 30px; border-collapse: collapse;">
-                <tbody><tr>
-                    <td style="width: 45%; text-align: center;">
-                        <p style="font-weight: bold; margin: 10px 0;">ĐẠI DIỆN BÊN A</p>
-                    </td>
-                    <td style="width: 10%;"></td>
-                    <td style="width: 45%; text-align: center;">
-                        <p style="font-weight: bold; margin: 10px 0;">ĐẠI DIỆN BÊN B</p>
-                    </td>
-                </tr>
-            </tbody></table>
-        </div>
-
-    <script>
+<table style="width: 100%; margin-top: 30px; border-collapse: collapse;">
+<tbody><tr>
+<td style="width: 45%; text-align: center;">
+<p style="font-weight: bold; margin: 10px 0;">ĐẠI DIỆN BÊN A</p>
+</td>
+<td style="width: 10%;"></td>
+<td style="width: 45%; text-align: center;">
+<p style="font-weight: bold; margin: 10px 0;">ĐẠI DIỆN BÊN B</p>
+</td>
+</tr>
+</tbody></table>
+</div>
+<script>
         // Lấy tham số từ URL
         function getParam(param) {
             const urlParams = new URLSearchParams(window.location.search);
@@ -888,14 +812,15 @@
                         field.textContent = data[fieldName] || "(Chưa có)";
                     });
 
-                    document.getElementById('Conten').style.display = 'block';
                     // Ẩn loading
-                    document.querySelector('.loading-overlay').style.display = 'none';
+                    document.getElementById('Conten').style.display = 'block';
+    document.querySelector('.loading-overlay').style.display = 'none';
                 })
                 .catch(err => {
                     alert("Lỗi khi kết nối đến API.");
                     console.error(err);
-                    document.querySelector('.loading-overlay').style.display = 'none';
+                    document.getElementById('Conten').style.display = 'block';
+    document.querySelector('.loading-overlay').style.display = 'none';
                 });
         } else {
             alert("Thiếu tham số ID_HopDong trong URL.");
@@ -918,5 +843,5 @@
             URL.revokeObjectURL(url);
         }
     </script>
-</body>
+</div></body>
 </html> 
